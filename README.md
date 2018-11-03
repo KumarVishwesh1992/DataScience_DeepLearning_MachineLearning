@@ -10,5 +10,7 @@ A workaround:
 Try to open that notebook that you want using nbviewer online, you don't need to install it.
 
 Open "https://nbviewer.jupyter.org/"
-Paste the link to your notebook, (e.g. "https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Classification/DecisionTree.ipynb") there and then you get 
+Paste the link to your notebook, (e.g. "https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Classification/DecisionTree.ipynb") there and then you get.
+
+
 Ref: https://github.com/iurisegtovich/PyTherm-applied-thermodynamics/issues/11
