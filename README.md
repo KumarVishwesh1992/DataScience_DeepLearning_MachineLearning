@@ -1,5 +1,4 @@
 # DataScience_DeepLearning_MachineLearning
-Data Science Skills
 The issue
 Getting the message "Sorry, something went wrong. Reload?" when viewing an *.ipynb on a GitHub blob page.
 
