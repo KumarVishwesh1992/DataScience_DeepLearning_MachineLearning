@@ -1,0 +1,41 @@
+#Snippets:
+#date Time manipulation
+df['timestamp'] = df[['TheDate','TIME_OF_DAY']].apply(lambda x: ' '.join(x), axis=1)
+df['timestamp'] = pd.to_datetime(df['timestamp'], format = '%m/%d/%Y %H:%M:%S')
+df = df.drop_duplicates(subset=['timestamp'], keep = 'first')
+df.reset_index(inplace=True)
+df['Hour'] = df.timestamp.apply(lambda x: x.hour)
+df['Hour'] = df['Hour'].apply(lambda x: '{0:0>2}'.format(x))
+df['Min'] = df.timestamp.apply(lambda x: x.minute)
+df['Min'] = df['Min'].apply(lambda x: '{0:0>2}'.format(x))
+df['Month'] = df.timestamp.apply(lambda x: x.month)
+df['Month'] = df['Month'].apply(lambda x: '{0:0>2}'.format(x))
+df['Day'] = df.timestamp.apply(lambda x: x.day)
+df['Day'] = df['Day'].apply(lambda x: '{0:0>2}'.format(x))
+df['Year'] = df.timestamp.apply(lambda x: x.year)
+df['Weekday'] = df['timestamp'].dt.weekday_name
+df['Index'] = df['Year'].astype(str)+'-'+df['Month']+'-'+df['Day']+' '+df['Hour']+' '+df['Min']
+df.head()
+df['CPU_Busy'] = df['CPU_USR'] + df['CPU_SYS']
+df1 = df[['Index','CPU_Busy']]
+df1['Index'] = pd.to_datetime(df1['Index'], format = '%Y-%m-%d %H %M')
+df1['Weekday'] = df1['Index'].dt.weekday_name
+df1.head()
+df1 = df1.set_index('Index')
+df1 = df1.resample('10Min').interpolate(method='linear')
+df1.reset_index(inplace=True)
+df1['Weekday'] = df1['Index'].dt.weekday_name
+print(df1.count())
+warnings.filterwarnings("ignore") # specify to ignore warning messages
+df_mon = df1[df1['Weekday'] == 'Monday']
+del df_mon['Weekday']
+del df_mon['Index']
+df_mon.reset_index(inplace=True)
+del df_mon['index']
+length = len(df_mon.index)-1
+df_mon.drop(df_mon.index[length], inplace=True)
+start = datetime.datetime.strptime("00:00:00",'%H:%M:%S')
+time_list = [start + relativedelta(minutes=x*10) for x in range(0,length)]
+df_mon['index'] = time_list
+df_mon.set_index(['index'], inplace=True)
+df_mon.index.name=None
