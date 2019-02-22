@@ -16,26 +16,3 @@ df['Year'] = df.timestamp.apply(lambda x: x.year)
 df['Weekday'] = df['timestamp'].dt.weekday_name
 df['Index'] = df['Year'].astype(str)+'-'+df['Month']+'-'+df['Day']+' '+df['Hour']+' '+df['Min']
 df.head()
-df['CPU_Busy'] = df['CPU_USR'] + df['CPU_SYS']
-df1 = df[['Index','CPU_Busy']]
-df1['Index'] = pd.to_datetime(df1['Index'], format = '%Y-%m-%d %H %M')
-df1['Weekday'] = df1['Index'].dt.weekday_name
-df1.head()
-df1 = df1.set_index('Index')
-df1 = df1.resample('10Min').interpolate(method='linear')
-df1.reset_index(inplace=True)
-df1['Weekday'] = df1['Index'].dt.weekday_name
-print(df1.count())
-warnings.filterwarnings("ignore") # specify to ignore warning messages
-df_mon = df1[df1['Weekday'] == 'Monday']
-del df_mon['Weekday']
-del df_mon['Index']
-df_mon.reset_index(inplace=True)
-del df_mon['index']
-length = len(df_mon.index)-1
-df_mon.drop(df_mon.index[length], inplace=True)
-start = datetime.datetime.strptime("00:00:00",'%H:%M:%S')
-time_list = [start + relativedelta(minutes=x*10) for x in range(0,length)]
-df_mon['index'] = time_list
-df_mon.set_index(['index'], inplace=True)
-df_mon.index.name=None
