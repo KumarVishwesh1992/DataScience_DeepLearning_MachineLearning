@@ -1,0 +1,37 @@
+def Find_Optimal_Cutoff(target, predicted):
+    """ Find the optimal probability cutoff point for a classification model related to event rate
+    Parameters
+    ----------
+    target : Matrix with dependent or target data, where rows are observations
+
+    predicted : Matrix with predicted data, where rows are observations
+
+    Returns
+    -------     
+    list type, with optimal cutoff value
+
+    """
+    fpr, tpr, threshold = roc_curve(target, predicted)
+    i = np.arange(len(tpr)) 
+    roc = pd.DataFrame({'tf' : pd.Series(tpr-(1-fpr), index=i), 'threshold' : pd.Series(threshold, index=i)})
+    roc_t = roc.ix[(roc.tf-0).abs().argsort()[:1]]
+
+    return list(roc_t['threshold']) 
+
+
+# Add prediction probability to dataframe
+data['pred_proba'] = result.predict(data[train_cols])
+
+# Find optimal probability threshold
+threshold = Find_Optimal_Cutoff(data['admit'], data['pred_proba'])
+print threshold
+# [0.31762762459360921]
+
+# Find prediction to the dataframe applying threshold
+data['pred'] = data['pred_proba'].map(lambda x: 1 if x > threshold else 0)
+
+# Print confusion Matrix
+from sklearn.metrics import confusion_matrix
+confusion_matrix(data['admit'], data['pred'])
+# array([[175,  98],
+#        [ 46,  81]])
