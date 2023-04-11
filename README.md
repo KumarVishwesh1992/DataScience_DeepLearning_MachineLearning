@@ -30,7 +30,7 @@
    d. [Cleaning Your Data](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Data%20Analysis%2C%20Hacks/clean.ipynb)<br>
    e. [Principal Component Analysis](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Data%20Analysis%2C%20Hacks/PCA.ipynb)<br>
    f. [Feature Selection](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Feature_selection.ipynb)<br>
-   g. [Code Snippets-date Time manipulation](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/projects/Snippets-Time-PreP)<br>
+   g. [Code Snippets-Date Time manipulation](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/projects/Snippets-Time-PreP)<br>
 7. Clustering<br>
   a. [K Means](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/tree/master/Clustering)<br>
 8. Recommender system<br>
