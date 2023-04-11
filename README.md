@@ -41,7 +41,7 @@
   b. [ANN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/keras/Keras.ipynb)<br>
   c. [CNN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/keras/Keras-CNN.ipynb)<br>
   d. [RNN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/keras/Keras-RNN.ipynb)<br>
-  e. [Feature Importance ANN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Data%20Analysis%2C%20Hacks/Feature_imp_ANN.ipynb) Ref: [Garson Algorithm](https://csiu.github.io/blog/update/2017/03/30/day34.html) & [Connection weight](https://csiu.github.io/blog/update/2017/03/31/day35.html)<br>
+  e. [Feature Importance ANN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Data%20Analysis%2C%20Hacks/Feature_imp_ANN.ipynb) (Ref: [Garson Algorithm](https://csiu.github.io/blog/update/2017/03/30/day34.html) & [Connection weight](https://csiu.github.io/blog/update/2017/03/31/day35.html))<br>
 10. Projects<br>
   a. [Predict political party based on votes](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/projects/PoliticsExercise.ipynb)<br>
   b. [Predict whether a mammogram mass is benign or malignant](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/projects/mammo_masses_project.ipynb)<br>
