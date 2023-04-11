@@ -21,5 +21,10 @@
   a. [Linear Regression](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Regression/LinearRegression.ipynb)
   b. [Multivariate Regression](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Regression/MultivariateRegression.ipynb)
   c. [Polynomial Regression](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/Regression/PolynomialRegression.ipynb)
+6. [Conditional Probability](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/tree/master/conditional%20probability)
+7. Keras
+  a. [ANN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/keras/Keras.ipynb)
+  b. [CNN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/keras/Keras-CNN.ipynb)
+  c. [RNN](https://github.com/KumarVishwesh1992/DataScience_DeepLearning_MachineLearning/blob/master/keras/Keras-RNN.ipynb)
    
    
